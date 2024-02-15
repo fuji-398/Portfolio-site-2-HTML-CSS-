@@ -1,0 +1,229 @@
+@charset "UTF-8";
+
+/* common part
+--------------------- */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: Meiryo;
+    font-size: 0.9rem;
+    color: #383e45;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 960px;
+    padding: 0 4%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.section-a-container {
+    container-type: inline-size;
+    container-name: section1-container;
+}
+
+.section-b-container {
+    container-type: inline-size;
+    container-name: section2-container;
+}
+
+/* header
+--------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+}
+
+h1 {
+    font-size: 0px;
+}
+
+.logo {
+    width: 120px;
+    height: 40px;
+}
+
+.main-nav {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav a {
+    margin-left: 32px;
+    letter-spacing: 0.2px;
+    color: #24292e;
+}
+
+.main-nav a:hover {
+    color: #8ba1b8;
+}
+
+/* main
+--------------------- */
+
+/* hero 
+--------------------- */
+#hero {
+    background: url(../img/mainvisual.jpg) no-repeat center center / cover;
+    height: 600px;
+    margin-bottom: 80px;
+}
+
+/* ------------------
+section common part
+--------------------- */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 6px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: solid 1px #383e45;
+    margin-bottom: 70px;
+    letter-spacing: 1px;
+    line-height: 2.6rem;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+}
+
+/* section about 
+--------------------- */
+.a-section {
+    margin: 0 auto 100px auto;
+}
+
+.a-container {
+    display: flex;
+}
+
+.a-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+.a-section h3 {
+    margin-bottom: 12px;
+}
+
+.a-container > div > p {
+    letter-spacing: -0.23px;
+}
+
+/* section about container query
+    --------------------- */
+@container section1-container (width < 600px) {
+    .a-section {
+        margin-bottom: 100px;
+    }
+
+    h2 {
+        margin-bottom: 60px;
+    }
+
+    .a-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .a-section img {
+        margin: 0 0 8px 0;
+    }
+    .a-container > div > p {
+        line-height: 22px;
+    }
+}
+
+/* section bicycle 
+--------------------- */
+.b-section {
+    margin: 0 auto 112px auto;
+}
+
+#bicycle > h2 {
+    margin-bottom: 58px;
+}
+
+.b-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.b-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32%;
+}
+
+.b-section img {
+    margin-bottom: 11px;
+}
+
+.b-section h3 {
+    margin-bottom: 9px;
+}
+
+.b-content > p {
+    letter-spacing: -0.5px;
+}
+/* section bicycle container query
+    --------------------- */
+@container section2-container (width < 600px) {
+    .b-section {
+        margin-bottom: 82px;
+    }
+
+    h2 {
+        margin-bottom: 67px;
+    }
+
+    .b-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .b-content {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .b-content > p {
+        letter-spacing: -0.2px;
+    }
+}
+
+/* ------------------
+section end
+--------------------- */
+
+/* footer
+--------------------- */
+footer p {
+    text-align: center;
+    font-size: 8px;
+    margin-bottom: 12px;
+    letter-spacing: 0.2px;
+}
